@@ -1198,8 +1198,12 @@ The moveElement function is working really well now. There’s just one thing th
 ```
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
+```
+
 It’s assuming that the element elem has a left style property and a top style property. We should really check to make sure that this is the case.
 If the left or top properties haven’t been set, we have a couple of options. We could simply exit the function there and then:
+
+```
 if (!elem.style.left || !elem.style.top) {
   return false;
 }
@@ -1386,7 +1390,8 @@ The other file we need to update is the style sheet, layout.css. Remove this lin
 
 ```
 preview.style.position = "absolute";
-</pre>
+```
+
 Now place that declaration in the style sheet, where it belongs:
 
 ```
