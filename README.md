@@ -585,13 +585,19 @@ function positionMessage() {
 }
 addLoadEvent(positionMessage);
 </pre>
-Reload message.html to see the new animation. Both elements move in different directions at the same time.
+<p>Reload message.html to see the new animation. Both elements move in different directions 
+at the same time.</p>
  
-The moveElement function is doing all the work in both cases. By simply changing the arguments that you send to the function, you can reuse it as often as you like. This is the great advantage of using arguments instead of hard-coding values.
-The situation
-We have a web page that contains a list of links. When the user hovers over one of these links, we want to provide some kind of sneak preview of where the link will lead—we would like to show an image.
-The document is called list.html. Here’s the markup:
-<pre>
+<p>The moveElement function is doing all the work in both cases. By simply changing the 
+arguments that you send to the function, you can reuse it as often as you like. This is 
+the great advantage of using arguments instead of hard-coding values.</p>
+<h4>The situation</h4>
+<p>We have a web page that contains a list of links. When the user hovers over one of 
+these links, we want to provide some kind of sneak preview of where the link will 
+lead—we would like to show an image.</p>
+<p>The document is called list.html. Here’s the markup:</p>
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -608,7 +614,8 @@ The document is called list.html. Here’s the markup:
   </ol>
 </body>
 </html>
-</pre>
+```
+
 Each link leads to a page covering a particular aspect of web design. The text within each link succinctly describes the content of the linked page.
  
 As it stands, this document is perfectly fine. That said, showing a visual clue about the destination documents would be a nice touch.
@@ -623,7 +630,8 @@ Here’s what we’ll do:
 I’ve made a composite image of the three previews plus one default view.
  
 The image is called topics.gif. It is 400 pixels wide and 100 pixels tall. We’ll insert the topics.gif image into list.html, giving it an id of "preview":
-<pre>
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -642,7 +650,8 @@ The image is called topics.gif. It is 400 pixels wide and 100 pixels tall. We’
     id="preview" />
 </body>
 </html>
-</pre>
+```
+
 The web page now contains the list of links and the composite image.
  
 Right now, the entire image is visible. We want only a 100-by-100 pixel portion to be visible at any one time. We can’t do that with JavaScript, but we can do it with CSS.
@@ -655,33 +664,40 @@ There are four possible values for the overflow property:
 •	"auto": A value of “auto" is just like "scroll", except that the scrollbars will be displayed only if the content overflows its container element. If there is no overflow, no scrollbars appear.
 Of these four values, "hidden" sounds like the most promising for our purposes. We want to display just a 100-by-100 pixel portion of an image that is 400-by-100 pixels in size.
 First, let’s wrap the image in a container element. We’ll put it in a div element with an id of "slideshow":
-<pre>
+
+```
 <div id="slideshow">
   <img src="images/topics.gif" alt="building blocks of web design" 
     id="preview" />
 </div>
-</pre>
+```
+
 Now, we’ll create a style sheet called layout.css. Put this file in a folder called styles.
 In layout.css, we can set the size of the "slideshow" div:
-<pre>
+
+```
 #slideshow {
   width: 100px;
   height: 100px;
   position: relative;
 }
-</pre>
+```
+
 Setting the position to relative is important because we want to use an absolute position for the child image. By using relative, the 0,0 position for children elements will be the upper-left corner of the slideshow div.
 By applying an overflow value of "hidden", we can ensure that the content within the div will be clipped:
-<pre>
+
+```
 #slideshow {
 width: 100px;
 height: 100px;
 position: relative;
 overflow: hidden;
 }
-</pre>
+```
+
 We’re attaching the layout.css style sheet to list.html using a <link> in the head of the document:
-<pre>
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -703,7 +719,8 @@ We’re attaching the layout.css style sheet to list.html using a <link> in the 
   </div>
 </body>
 </html>
-</pre>
+```
+
 Load list.html in a web browser to see the difference. The image has been clipped. Now only a portion of topics.gif—only the first 100 pixels—is visible.
  
 The next part of the plan revolves around the actions of the user. We want to display a different portion of topics.gif in the "slideshow" div depending on which link the user hovers the mouse over.
@@ -712,7 +729,8 @@ JavaScript
 We’ll use the moveElement function to move the topics.gif image around. We’ll move the image to the left or to the right, depending on which link the user is currently hovering over.
 We need to attach that behavior (calling the moveElement function) to the onmouseover event of each link in the link list.
 Here’s a function called prepareSlideshow, which does just that:
-<pre>
+
+```
 function prepareSlideshow() {
   // Make sure the browser understands the DOM methods
   if (!document.getElementsByTagName) return false;
@@ -739,54 +757,70 @@ function prepareSlideshow() {
     moveElement("preview",-300,0,10);
   }
 }
-</pre>
+```
+
 First, the prepareSlideshow function checks for browser compatibility with the DOM methods that will be used:
-<pre>
+
+```
 if (!document.getElementsByTagName) return false;
 if (!document.getElementById) return false;
-</pre>
+```
+
 Next, there’s a check to make sure that the "linklist" and "preview" elements exist. Remember that "preview" is the id value of the topics.gif image.
-<pre>
+
+```
 if (!document.getElementById("linklist")) return false;
 if (!document.getElementById("preview")) return false;
-</pre>
+```
+
 After that, a default position is given to the "preview" image. We’re setting the left property to "0px" and the top property to "0px":
-<pre>
+
+```
 var preview = document.getElementById("preview");
 preview.style.position = "absolute";
 preview.style.left = "0px";
 preview.style.top = "0px";
-</pre>
+```
+
 This doesn’t mean that the topics.gif image will appear in the top-left corner of the screen. Instead, it will appear in the top-left corner of its container element, the "slideshow" div. That’s because the CSS position value of the div is "relative". Any absolutely positioned elements contained by a relatively positioned element will be placed in relation to that container element. In other words, the "preview" image will appear zero pixels to the left and zero pixels from the top of the "slideshow" element.
 Finally, we’re attaching the onmouseover behaviors to the links in the list. The variable links contains a node set of all the a elements contained within the "linklist" element. The first link is links[0], the second link is links[1], and the third link is links[2].
-<pre>
+
+```
 var list = document.getElementById("linklist");
 var links = list.getElementsByTagName("a");
-</pre>
+```
+
 When the user hovers over the first link, the moveElement function is called. The elementID argument has a value of "preview". The final_x argument has a value of -100. The final_y argument has a value of 0. The interval argument is ten milliseconds.
-<pre>
+
+```
 links[0].onmouseover = function() {
   moveElement("preview",-100,0,10);
 }
-</pre>
+```
+
 The same behavior applies for the second link, except that the final_x argument is -200:
-<pre>
+
+```
 links[1].onmouseover = function() {
   moveElement("preview",-200,0,10);
 }
-</pre>
+```
+
 The third link will move the "preview" element -300 pixels to the left:
-<pre>
+
+```
 links[2].onmouseover = function() {
   moveElement("preview",-300,0,10);
 }
-</pre>
+```
+
 The prepareSlideshow function is called using the addLoadEvent function. The behaviors are attached when the page loads.
 addLoadEvent(prepareSlideshow);
 Save the prepareSlideshow function to a file called prepareSlideshow.js in a folder called scripts.
 Place the moveElement.js and addLoadEvent.js files in the same folder.
 We can reference all three scripts from list.html by adding <script> tags immediately before the closing </body> tag:
-<pre>
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -811,14 +845,16 @@ We can reference all three scripts from list.html by adding <script> tags immedi
   <script src="scripts/prepareSlideshow.js"></script>
 </body>
 </html>
-</pre>
+```
+
 Load list.html in a web browser. Hover over one of the links in the list to see the slideshow in action.
  
 Depending on which link in the list you hover over, a different portion of the topics.gif image will slide into view.
 But something is not quite right. If you move quickly from link to the link, the animation becomes confused. There’s something wrong with the moveElement function.
 A question of scope
 The animation problem is being caused by a global variable. When we abstracted the moveMessage function and turned it into the moveElement function, we left the variable movement as it was:
-<pre>
+
+```
 function moveElement(elementID,final_x,final_y,interval) {
   if (!document.getElementById) return false;
   if (!document.getElementById(elementID)) return false;
@@ -846,23 +882,41 @@ function moveElement(elementID,final_x,final_y,interval) {
   "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
   movement = setTimeout(repeat,interval);
 }
-</pre>
+```
+
 This is causing a problem now that the moveElement function is being called whenever the user hovers over a link. Regardless of whether or not the previous call to the function has finished moving the image, the function is being asked to move the same element somewhere else. In other words, the moveElement function is attempting to move the same element to two different places at once, and the movement variable has become the rope in a tug of war.
 As the user quickly moves from link to link, there is a backlog of events building up in the setTimeout queue. We can flush out this backlog by using clearTimeout:
+
+```
 clearTimeout(movement);
+```
+
 But if this statement is executed before movement has been set, we’ll get an error. We can’t use a local variable:
+
+```
 var movement = setTimeout(repeat,interval);
+```
+
 If we do that, the clearTimeout statement won’t work; the movement variable will no longer exist. We can’t use a global variable. 
 We can’t use a local variable. We need something in between. We need a variable that applies just to the element being moved.
 Element-specific variables do exist. In fact, we’ve been using them all the time. What I’ve just described is a property.
 Until now, we’ve used properties provided by the DOM: element.firstChild, element.style, and so on. You can also assign your own properties:
+
+```
 element.property = value
+```
+
 If you wanted, you could create a property called foo with a value of "bar":
+
+```
 element.foo = "bar";
+```
+
 It’s just like creating a variable. The difference is that the variable belongs just to that element.
 Let’s change movement from being a global variable to a property of the element being moved, elem.
 That way, we can test for its existence and, if it exists, use clearTimeout.
-<pre>
+
+```
 function moveElement(elementID,final_x,final_y,interval) {
 if (!document.getElementById) return false;
 if (!document.getElementById(elementID)) return false;
@@ -892,7 +946,8 @@ elem.style.top = ypos + "px";
 var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
 elem.movement = setTimeout(repeat,interval);
 }
-</pre>
+```
+
 Whichever element is currently being moved by the moveElement function is assigned a property called movement. If the element already has this property at the start of the function, it is reset using clearTimeout. This means that even if the same element is being told to move in different directions, there is only ever one setTimeout statement.
 Reload list.html. Moving quickly from link to link no longer creates a problem. There is no backlog of events being queued up. The animation changes direction as you move up and down the list of links. Still, the animation is a bit lackluster.
 Refining the animation
@@ -906,46 +961,57 @@ if (xpos < final_x) {
 The variable xpos is the element’s current left position. The variable final_x is the element’s final left position. This piece of code states, “If the variable xpos is less than the variable final_x, increase the value of xpos by one.” No matter how far away the element is from its final position, it will always move toward it one pixel at a time. To add some interest, we’ll change that.
 If the element is far away from its final position, we want it to move a large distance. If the element is near to its final position, we want it to move a short distance.
 First, we need to figure out how far the element is from its final destination. If xpos is less than final_x, we want to know by how much. We can find out by subtracting xpos, the current left position, from final_x, the desired left position:
-<pre>
+
+```
 dist = final_x - xpos;
 That’s the distance that the element needs to travel. We’ll move the element one-tenth of this distance.
 dist = (final_x - xpos)/10;
 xpos = xpos + dist;
-</pre>
+```
+
 This will move the element one-tenth of the distance it needs to go. I’ve chosen one-tenth as a nice round fraction. You can try other values if you like,
 If xpos is 500 pixels away from final_x, the variable dist will have a value of 50. The value of xpos is increased by 50. If xpos is 100 pixels less than final_x, xpos is increased by ten.
 A problem occurs when the distance between xpos and final_x is less than ten. When that value is divided by ten, the result will be less than one. You can’t move an element by less than one pixel.
 Using the ceil property of the Math object, you can round up the value of the variable dist. The ceil property has the following syntax:
-<pre>
+
+```
 Math.ceil(number)
 </pre>
 This will round up any floating-point number to the nearest integer. There is a corresponding floor property that will round any floating-point number down to the nearest integer. The round property will round any floating-point number to whichever whole number is closest:
 <pre>
 Math.floor(number)
 Math.round(number)
-</pre>
+```
+
 For the moveElement function, we’ll round upward. If we used floor or round, the element might never reach its final destination.
-<pre>
+
+```
 dist = Match.ceil((final_x - xpos)/10);
 xpos = xpos + dist;
-</pre>
+```
+
 This covers the situation when xpos is less than final_x:
-<pre>
+
+```
 if (xpos < final_x) {
   dist = Math.ceil((final_x - xpos)/10);
   xpos = xpos + dist;
 }
-</pre>
+```
+
 If xpos is greater than final_x, then the distance to travel is calculated by subtracting final_x from xpos. This value is divided by ten and rounded up to the nearest whole number to give the variable dist.
 This is then subtracted from xpos to bring the element closer to its final destination.
-<pre>
+
+```
 if (xpos > final_x) {
   dist = Math.ceil((xpos - final_x)/10);
   xpos = xpos - dist;
 }
-</pre>
+```
+
 The same logic applies for ypos and final_y:
-<pre>
+
+```
 if (ypos < final_y) {
   dist = Math.ceil((final_y - ypos)/10);
   ypos = ypos + dist;
@@ -954,15 +1020,19 @@ if (ypos > final_y) {
   dist = Math.ceil((ypos - final_y)/10);
   ypos = ypos - dist;
 }
-</pre>
+```
+
 For good measure, don’t forget to declare the dist variable alongside xpos and ypos:
-<pre>
+
+```
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
 var dist = 0;
-</pre>
+```
+
 The updated moveElement function looks like this:
-<pre>
+
+```
 function moveElement(elementID,final_x,final_y,interval) {
   if (!document.getElementById) return false;
   if (!document.getElementById(elementID)) return false;
@@ -998,14 +1068,16 @@ function moveElement(elementID,final_x,final_y,interval) {
    "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
     elem.movement = setTimeout(repeat,interval);
 }
-</pre>
+```
+
 Save these changes to moveElement.js. Reload list.html to see the difference.
  
 The animation now feels much smoother and snappier. When you first hover over a link, the image jumps quite a distance. As the image approaches its final destination, it “eases” into place.
 The markup, the CSS, and the JavaScript all come together to create this slideshow effect. Everything is working fine, but there’s always room for some small tweaks.
 Adding a safety check
 The moveElement function is working really well now. There’s just one thing that bothers me. There is an assumption being made near the start of the function:
-<pre>
+
+```
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
 It’s assuming that the element elem has a left style property and a top style property. We should really check to make sure that this is the case.
@@ -1013,19 +1085,23 @@ If the left or top properties haven’t been set, we have a couple of options. W
 if (!elem.style.left || !elem.style.top) {
   return false;
 }
-</pre>
+```
+
 If JavaScript can’t read those properties, then the function stops without throwing up an error message.
 Another solution is to apply default left and top properties in the moveElement function. If either property hasn’t been set, we can give them a default value of "0px":
-<pre>
+
+```
 if (!elem.style.left) {
   elem.style.left = "0px";
 }
 if (!elem.style.top) {
   elem.style.top = "0px";
 }
-</pre>
+```
+
 The moveElement function now looks like this:
-<pre>
+
+```
 function moveElement(elementID,final_x,final_y,interval) {
 if (!document.getElementById) return false;
 if (!document.getElementById(elementID)) return false;
@@ -1066,45 +1142,58 @@ elem.style.top = ypos + "px";
 var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
 elem.movement = setTimeout(repeat,interval);
 }
-</pre>
+```
+
 With that safety check in place, we no longer need to explicitly set the position of the "preview" element. Right now, we’re doing that in the prepareSlideshow function. Remove these lines:
-<pre>
+
+```
 preview.style.left = "0px";
 preview.style.top = "0px";
-</pre>
+```
+
 While we’re at it, let’s overhaul the prepareSlideshow function.
 Generating markup
 The list.html document contains some markup that exists just for the JavaScript slideshow:
-<pre>
+
+```
 <div id="slideshow">
 <img src="images/topics.gif" alt="building blocks of web design" id="preview" />
 </div>
-</pre>
+```
+
 If the user doesn’t have JavaScript enabled, this content is somewhat superfluous. The div and the img element are there purely for the slideshow effect. Instead of hard-coding these elements into the document, it makes sense to use JavaScript to generate them. Let’s do that in prepareSlideshow.js.
 First, create the div element:
-<pre>
+
+```
 var slideshow = document.createElement("div");
 slideshow.setAttribute("id","slideshow");
-</pre>
+```
+
 Next, create the img element:
 
-<pre>
+```
 var preview = document.createElement("img");
 preview.setAttribute("src","images/topics.gif");
 preview.setAttribute("alt","building blocks of web design");
 preview.setAttribute("id","preview");
-</pre>
+```
+
 Place the img inside the div:
-<pre>
+
+```
 slideshow.appendChild(preview);
-</pre>
+```
+
 Finally, we want these newly created elements to appear directly after the list of links. For this, we’ll use the insertAfter function from Chapter 7:
-<pre>
+
+```
 var list = document.getElementById("linklist");
 insertAfter(slideshow,list);
-</pre>
+```
+
 The finished prepareSlideshow function looks like this:
-<pre>
+
+```
 function prepareSlideshow() {
   // Make sure the browser understands the DOM methods
   if (!document.getElementsByTagName) return false;
@@ -1134,9 +1223,11 @@ function prepareSlideshow() {
   }
 }
 addLoadEvent(prepareSlideshow);
-</pre>
+```
+
 Now we need to make some changes to list.html. We can remove the markup with the "slideshow" div and the "preview" image. We also need to include one more set of <script> tags to reference the insertAfter.js file.
-<pre>
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1158,9 +1249,11 @@ Now we need to make some changes to list.html. We can remove the markup with the
   <script src="scripts/prepareSlideshow.js"></script>
 </body>
 </html>
-</pre>
+```
+
 Write the insertAfter function to a file called insertAfter.js and place it in the scripts folder:
-<pre>
+
+```
 function insertAfter(newElement,targetElement) {
   var parent = targetElement.parentNode;
   if (parent.lastChild == targetElement) {
@@ -1169,9 +1262,11 @@ function insertAfter(newElement,targetElement) {
     parent.insertBefore(newElement,targetElement.nextSibling);
   }
 }
-</pre>
+```
+
 The other file we need to update is the style sheet, layout.css. Remove this line from prepareSlideshow.js:
-<pre>
+
+```
 preview.style.position = "absolute";
 </pre>
 Now place that declaration in the style sheet, where it belongs:
@@ -1185,7 +1280,8 @@ Now place that declaration in the style sheet, where it belongs:
 #preview {
   position: absolute;
 }
-</pre>
+```
+
 Now refresh list.html in a web browser. You will see no difference in functionality. Everything is behaving just as before. The difference is that now there is better separation of structural, presentational, and behavioral elements. If you view the same page with JavaScript disabled, the slideshow image simply doesn’t appear.
 Functionally, the JavaScript slideshow is working very well. With JavaScript enabled, the slideshow adds some nice visual feedback, responding to the user’s actions. With JavaScript disabled, the functionality degrades gracefully.
 If you wanted to visually associate the list of links more closely with the slideshow, you could do that by editing layout.css. You could float the two elements side by side. You could also place a border around the slideshow if you wanted it to stand out more.
