@@ -23,72 +23,90 @@ JavaScript Animated Slideshow
 ## Module 3: Advanced JavaScript Techniques and jQuery
 ### Syllabus
 ## Fundamentals of Web Development
-Instructor
-Daniel Krieglstein, Adjunct Instructor, Illinois Institute of Technology
-Daniel, Krieglstein| Illinois Institute of Technology (iit.edu)
-Course Description
-This course covers the creation of Web pages and sites using HTML, CSS, Javascript, jQuery, and graphical applications as well as the client and server architecture of the Internet and related web technologies. 
-Course Outcomes
-Upon successful completion of this course, you will be able to:
-•	Explain the client and server architecture of both the internet and related web technologies. 
-•	Use a basic text editor and other software tools to create web pages written in HTML, CSS, JavaScript, and jQuery.
-•	Deploy web pages to a GitHub using version control and GitHub Desktop. 
-•	Understand the history and track the ongoing development of web standard specifications from the W3C, ISO, IETF, and other specifications-issuing groups. 
-•	Research and argue for methods of web development that keep structure in HTML, design entirely in CSS, and progressively enhanced behavior in JavaScript.
-•	Engage in agile, iterative web development, supported by version control. 
-•	Write useful, descriptive messages attached to granular commits in a version control.
-Course Materials
-The link to reading materials and resources to learn on the topics can be found in each week’s learning module. All materials are available online for free, no required resources need to be purchased. There is no required textbook to supplement the course materials. Note: Be aware that some resources may open in a new tab.
-Software Requirements:
-•	An email account. 
-•	A GitHub account. 
-•	A personal computer with the following software installed: 
-•	A plain-text code-editor capable of syntax highlighting. Recommended: Notepad++ (Windows), TextWrangler (mac), or Sublime Text (multi-platform). 
-•	GitHub Desktop (or Git if you are already proficient). 
-•	Image-editing software (such as the free and open-source GIMP) 
-•	At least three different browsers (e.g., Chrome, Opera, Firefox, and/or Edge)
-Course Outline
-The course consists of 8 modules that focus on the following key areas:
-Module 1: Internet Structures and an Introduction to HTML
-Key concepts
-•	History of the Web
-•	The Tools of Internet Publishing
-•	Browsers and Web Addresses
-•	HTTP Requests
-•	Meet Our Three Languages
-•	The Basics of HTML
-Readings 
-•	First out-of-order operations
-•  •  First Dial-up Network
-•  •  Proposal for Email
-•  •  First ever Website
-•  •  How Browsers Work
-•	
-Module 2: HTML
-Key concepts
-•	HTML Elements (Inline vs. Box), and HTML Lists
-•	UTF8 Characters
-•	HTML Links and Images
-•	HTML Tables
-Module 3: HTML Forms
-Key concepts
-•	Website Navigation (Simple HTML)
-•	HTML Forms
-•	Page Layout: Resumes
-Module 4: Introduction to CSS
-Key concepts
-•	How CSS Talks to HTML
-•	CSS Declarations
-•	The Box Model
-•	Box Sizing
-•	CSS Resets
-Module 5: CSS Floats and Positions
-Key concepts
-•	CSS Fonts
-•	CSS Floats
-•	CSS Positions
-•	Horizontal Navigation
-•	Centered Navigation
+##### Instructor
+##### Daniel Krieglstein, Adjunct Instructor, Illinois Institute of Technology
+##### Daniel, Krieglstein| Illinois Institute of Technology (iit.edu)
+
+### Course Description
+<p>This course covers the creation of Web pages and sites using HTML, CSS, Javascript, jQuery, and graphical applications as well as the client and server architecture of the Internet and related web technologies.</p>
+### Course Outcomes
+<p>Upon successful completion of this course, you will be able to:</p>
+<ul>
+  <li>Explain the client and server architecture of both the internet and related web technologies.</li>
+  <li>Use a basic text editor and other software tools to create web pages written in HTML, CSS, JavaScript, and jQuery.</li>
+  <li>Deploy web pages to a GitHub using version control and GitHub Desktop.</li>
+  <li>Understand the history and track the ongoing development of web standard specifications from the W3C, ISO, IETF, and other specifications-issuing groups.</li>
+  <li>Research and argue for methods of web development that keep structure in HTML, design entirely in CSS, and progressively enhanced behavior in JavaScript.</li>
+  <li>Engage in agile, iterative web development, supported by version control.</li>
+  <li>Write useful, descriptive messages attached to granular commits in a version control.</li>
+</ul>
+### Course Materials
+<p>The link to reading materials and resources to learn on the topics can be found in each week’s learning module. All materials are available online for free, no required resources need to be purchased. There is no required textbook to supplement the course materials. Note: Be aware that some resources may open in a new tab.</p>
+#### Software Requirements:
+<ul>
+  <li>An email account.</li>
+  <li>A GitHub account.</li>
+  <li>A personal computer with the following software installed:</li>
+    <ul>
+      <li>A plain-text code-editor capable of syntax highlighting. Recommended: Notepad++ (Windows), TextWrangler (mac), or Sublime Text (multi-platform).</li>
+      <li>GitHub Desktop (or Git if you are already proficient).</li>
+      <li>Image-editing software (such as the free and open-source GIMP)</li>
+      <li>At least three different browsers (e.g., Chrome, Opera, Firefox, and/or Edge)</li>
+	</ul>
+  </li>
+</ul>
+<h3>Course Outline</h3>
+<p>The course consists of 8 modules that focus on the following key areas:</p>
+<h3>Module 1: Internet Structures and an Introduction to HTML</h3>
+<h4>Key concepts</h4>
+<ul>
+  <li>History of the Web</li>
+  <li>The Tools of Internet Publishing</li>
+  <li>Browsers and Web Addresses</li>
+  <li>HTTP Requests</li>
+  <li>Meet Our Three Languages</li>
+  <li>The Basics of HTML</li>
+</ul>
+<h4>Readings </h4>
+<ul>
+  <li>First out-of-order operations</li>
+  <li>First Dial-up Network</li>
+  <li>Proposal for Email</li>
+  <li>First ever Website</li>
+  <li>How Browsers Work</li>
+</ul>
+<h3>Module 2: HTML</h3>
+<h4>Key concepts</h4>
+<ul>
+  <li>HTML Elements (Inline vs. Box), and HTML Lists</li>
+  <li>UTF8 Characters</li>
+  <li>HTML Links and Images</li>
+  <li>HTML Tables</li>
+</ul>
+<h3>Module 3: HTML Forms</h3>
+<h4>Key concepts</h4>
+<ul>
+  <li>Website Navigation (Simple HTML)</li>
+  <li>HTML Forms</li>
+  <li>Page Layout: Resumes</li>
+</ul>
+<h3>Module 4: Introduction to CSS</h3>
+<h4>Key concepts</h4>
+  <li>How CSS Talks to HTML</li>
+  <li>CSS Declarations</li>
+  <li>The Box Model</li>
+  <li>Box Sizing</li>
+  <li>CSS Resets</li>
+</ul>
+<h3>Module 5: CSS Floats and Positions</h3>
+<h4>Key concepts</h4>
+<ul>
+  <li>CSS Fonts</li>
+  <li>CSS Floats</li>
+  <li>CSS Positions</li>
+  <li>Horizontal Navigation</li>
+  <li>Centered Navigation</li>
+</ul>
 Module 6: Website Layouts and Design
 Key concepts
 •	Standard Website Layouts
@@ -109,20 +127,22 @@ Key concepts
 •	Responsive Videos
 •	What This All Means for Using Website Frameworks
 
-End syllabus. Begin Course:
-Module 1: 
+<p>End syllabus. Begin Course:</p>
+<h2>Module 1:</h2>
 
-1.1 Course Introduction: JS Animated Slideshow
-Animation basics
-The previous chapter introduced the DOM’s ability to update the styles attached to a document. Using JavaScript to add presentational information can save you time and effort, but, for the most part, CSS remains the best tool for the job.
-There’s one area, however, where CSS can’t really help much. If you want to change an element’s style information over time, you’ll probably need to use JavaScript. CSS3 introduces a number of different transition methods that allow you to animate elements. However, currently, browser support without vendor-specific prefixes is minimal. JavaScript, on the other hand, allows you to execute functions at set intervals. This means that you can alter an element’s style with the passage of time.
-Position
-An element’s position in the browser window is presentational information. As such, it is usually added using CSS. Here’s an example that sets an element’s position on the page:
+<h3>1.1 Course Introduction: JS Animated Slideshow</h3>
+<h4>Animation basics</h4>
+<p>The previous chapter introduced the DOM’s ability to update the styles attached to a document. Using JavaScript to add presentational information can save you time and effort, but, for the most part, CSS remains the best tool for the job.</p>
+<p>There’s one area, however, where CSS can’t really help much. If you want to change an element’s style information over time, you’ll probably need to use JavaScript. CSS3 introduces a number of different transition methods that allow you to animate elements. However, currently, browser support without vendor-specific prefixes is minimal. JavaScript, on the other hand, allows you to execute functions at set intervals. This means that you can alter an element’s style with the passage of time.</p>
+<h5>Position</h5>
+<p>An element’s position in the browser window is presentational information. As such, it is usually added using CSS. Here’s an example that sets an element’s position on the page:</p>
+<pre>
 element {
   position: absolute;
   top: 50px;
   left: 100px;
 }
+</pre>
 That will position the element 100 pixels from the left of the browser window and 50 pixels from the top. Here’s the DOM equivalent of the same information:
 element.style.position = "absolute";
 element.style.left = "100px";
@@ -134,6 +154,7 @@ Setting an element’s top property will place the element a specified distance 
 Likewise with left and right. Positioning an element in the document is relatively straightforward. Say you had an element like this:
 <p id="message">Whee!</p>
 You could set the message element’s position in JavaScript with a function like this:
+<pre>
 function positionMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
@@ -142,7 +163,9 @@ function positionMessage() {
   elem.style.left = "50px";
   elem.style.top = "100px";
 }
+</pre>
 Calling the positionMessage function when the page loads will position the paragraph 50 pixels from the left and 100 pixels from the top of the browser window:
+<pre>
 window.onload = positionMessage;
 Better yet, use the addLoadEvent function:
 function addLoadEvent(func) {
@@ -157,30 +180,42 @@ function addLoadEvent(func) {
   }
 }
 addLoadEvent(positionMessage);
+</pre>
 Here, the element has been positioned absolutely.
  
 Updating an element’s position is also quite easy. You just need to run a function that updates a style property like top or left:
+<pre>
 function moveMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
   var elem = document.getElementById("message");
   elem.style.left = "200px";
 }
+</pre>
 But how do you activate that function? If you execute moveMessage when the page loads, the element’s position will be updated instantaneously. The original positioning, as specified by positionMessage, will be overridden instantly:
+<pre>
 addLoadEvent(positionMessage);
 addLoadEvent(moveMessage);
+</pre>
 Now the element’s position has been changed.
  
 The change in position is immediate. This isn’t true animation. Animation involves changing an element’s position over time.
 The problem in this situation is that JavaScript is too efficient. Functions are executed one after another without any noticeable pause. To create animation, you need to create delays, which is what we will look at next.
 Time
 The JavaScript function setTimeout allows you to execute a function after a specified amount of time has elapsed. It takes two arguments. The first argument is a string containing the function you want to execute. The second argument is the number of milliseconds that will elapse before the first argument is executed.
+<pre>
 setTimeout("function",interval)
+</pre>
 It’s a good idea to always assign the result of this function to a variable:
+<pre>
 variable = setTimeout("function",interval)
+</pre>
 You’ll need to do this if you want to cancel the action that has been queued up. You can cancel a pending action using a function called clearTimeout. This function takes one argument, which is a variable that has been assigned to the result of a setTimeout function:
+<pre>
 clearTimeout(variable)
+<pre>
 Let’s update the positionMessage function so that it calls moveMessage after 5 seconds (5,000 milliseconds):
+<pre>
 function positionMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
@@ -190,11 +225,16 @@ function positionMessage() {
   elem.style.top = "100px";
   movement = setTimeout("moveMessage()",5000);
 }
+</pre>
 The positionMessage function is called when the page loads:
+<pre>
 addLoadEvent(positionMessage);
+</pre>
 At first, the message appears at its specified coordinates. After five seconds, the message jumps 150 pixels to the right.
 If you want to cancel that action any time before the five seconds elapse, you could do so with this statement:
+<pre>
 clearTimeout(movement);
+</pre>
 The movement variable refers to the setTimeout function defined in positionMessage. It’s a global variable; it wasn’t declared with the var keyword. This means the action can be canceled outside the positionMessage function.
 Incremental movement
 Moving an element by 150 pixels after an interval of five seconds is a sort of animation, albeit a very primitive one. Effective animation uses incremental movement. Moving from the starting position to the final location should happen in a series of steps rather than one quick jump.
@@ -210,22 +250,31 @@ When the moveMessage function is called after the positionMessage function, xpos
 The JavaScript function parseInt can extract numeric information from a string. If you pass it a string that begins with a number, it will return the number:
 parseInt(string)
 Here’s an example:
+<pre>
 parseInt("39 steps");
+</pre>
 That will return the number 39.
 The parseInt function will return whole numbers (integers). If you need to extract numbers with decimal places (floating-point numbers), there is a corresponding parseFloat function:
+<pre>
 parseFloat(string)
+</pre>
 We’re dealing with integers in the moveMessage function, so we’ll use parseInt:
+<pre>
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
+</pre>
 The parseInt function converts the string "50px" to the number 50. The string "100px" becomes the number 100. Now the xpos and ypos variables contain those numbers.
 ■ Note The use of the parseInt function shown here works only when the elements have been assigned a position using a DOM script or the style property.
 The next few steps in the moveMessage function require the use of a lot of comparison operators.
 The first comparison is a test for equality. We want to find out if xpos is equal to the final left position and if ypos is equal to the final top position. If they are, we’ll exit the function. We can do this test by using the comparison operator, which consists of two equal signs (remember that a single equal sign is used for assignment)
+<pre>
 if (xpos == 200 && ypos == 100) {
   return true;
 }
+</pre>
 Everything after this line will be executed only if the message element has not reached its final position.
 Next, we’ll update the xpos and ypos numbers based on their relationship to the final position. We want to bring them both closer to the final coordinates. If the value of xpos is less than the final left position, increase it by one:
+<pre>
 if (xpos < 200) {
   xpos++;
 }
@@ -233,20 +282,26 @@ If it’s greater than the final left position, decrease it:
 if (xpos > 200) {
   xpos--;
 }
+</pre>
 The same applies for the relationship between the ypos variable and the final top position:
+<pre>
 if (ypos < 100) {
   ypos++;
 }
 if (ypos > 100) {
   ypos--;
 }
+</pre>
 You can see why we need xpos and ypos to be numbers rather than strings. We’re using the less-than and greater-than operators to compare numerical values and update the variables accordingly.
 Now we want to apply the xpos and ypos variables to the style property of the element. We do this by adding the string "px" to their values and applying them to the left and top properties:
+<pre>
 elem.style.left = xpos + "px";
 elem.style.top = ypos + "px";
+</pre>
 Finally, we want to repeat the whole function afresh after a slight pause. We’ll make the pause one hundredth of a second, which is ten milliseconds:
 movement = setTimeout("moveMessage()",10);
 The finished moveMessage function looks like this:
+<pre>
 function moveMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
@@ -272,9 +327,11 @@ function moveMessage() {
   elem.style.top = ypos + "px";
   movement = setTimeout("moveMessage()",10);
 }
+</pre>
 The message moves across the screen, one pixel at a time. Once the top property is "100px" and the left property is "200px", the function stops. That’s animation. It’s pretty pointless, but it’s animation nonetheless. We will be applying the same principles to something much more useful later in this chapter.
 Abstraction
 As it stands, the moveMessage function accomplishes a very specific task. It moves a specific element to a specific place, pausing for a specific amount of time between movements. All of that information is hard-coded into the function:
+<pre>
 function moveMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message"))
@@ -301,6 +358,7 @@ function moveMessage() {
   elem.style.top = ypos + "px";
   movement = setTimeout("moveMessage()",10);
 }
+</pre>
 If all of those things were variables, the function would be a lot more flexible. By abstracting the moveMessage function, you can create something more portable and reusable.
 Creating the moveElement function
 Call your new function moveElement. Unlike moveMessage, this function will take a number of arguments.
@@ -317,49 +375,68 @@ These arguments should all have descriptive names:
 Begin the moveElement function with these arguments:
 function moveElement(elementID,final_x,final_y,interval) {
 Substitute these for the values that were previously hard-coded into moveMessage. The moveMessage function began with these lines:
+<pre>
 if (!document.getElementById) return false;
 if (!document.getElementById("message")) return false;
 var elem = document.getElementById("message");
+</pre>
 Replace all the instances of getElementById("message") with getElementById(elementID):
+<pre>
 if (!document.getElementById) return false;
 if (!document.getElementById(elementID)) return false;
 var elem = document.getElementById(elementID);
+</pre>
 The variable elem now refers to whichever element you want to move.
 The next step of the function remains the same. The left and top properties of the element are converted to numbers and assigned to the variables xpos and ypos, respectively:
+<pre>
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
+</pre>
 Next, check to see if the element has reached its final position. In moveMessage, these coordinates were the values 200 (for the left position) and 100 (for the top position):
+<pre>
 if (xpos == 200 && ypos == 100) {
   return true;
 }
+</pre>
 In moveElement, these coordinates are provided by the arguments final_x and final_y:
+<pre>
 if (xpos == final_x && ypos == final_y) {
   return true;
 }
+</pre>
 Update the values of the xpos and ypos variables. If xpos is less than the final left position, increase its value by one.
 The final left position used to be hard-coded as 200:
+<pre>
 if (xpos < 200) {
   xpos++;
 }
+</pre>
 Now the final left position is contained in the final_x argument:
+<pre>
 if (xpos < final_x) {
   xpos++;
 }
+</pre>
 Likewise, if the value of xpos is greater than the final left position, decrease the value of xpos by one:
 if (xpos > final_x) {
   xpos--;
 }
+</pre>
 Do the same for ypos. If its value is less than final_y, increase it by one. If it is greater than final_y, decrease it by one:
+<pre>
 if (ypos < final_y) {
   ypos++;
 }
 if (ypos > final_y) {
   ypos--;
 }
+</pre>
 The next step remains the same. Update the left and top style properties of the element elem.
 Assign the values of xpos and ypos with the string "px" attached:
+<pre>
 elem.style.left = xpos + "px";
 elem.style.top = ypos + "px";
+</pre>
 Finally, we want to call the function again after a suitable interval. In moveMessage, this was quite straightforward. The moveMessage function is called after ten milliseconds:
 movement = setTimeout("moveMessage()",10);
 In moveElement, it gets a little trickier. As well as calling the function again, we need to pass it the same arguments: elementID, final_x, final_y, and interval. The whole thing needs to be contained as a string:
@@ -367,10 +444,13 @@ In moveElement, it gets a little trickier. As well as calling the function again
 That’s a lot of concatenating! Rather than inserting that long string directly into the setTimeout function, assign the string to a variable called repeat:
 var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
 Now we can simply insert repeat as the first argument of the setTimeout function. The second argument is the length of the pause before the first argument is called. This used to be hard-coded as ten milliseconds. Now it’s whatever value is contained by the variable interval:
+<pre>
 movement = setTimeout(repeat,interval);
 Close the function with a curly brace:
 }
+</pre>
 The finished moveElement function looks like this:
+<pre>
 function moveElement(elementID,final_x,final_y,interval) {
   if (!document.getElementById) return false;
   if (!document.getElementById(elementID)) return false;
@@ -397,10 +477,12 @@ function moveElement(elementID,final_x,final_y,interval) {
   var repeat =  "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
   movement = setTimeout(repeat,interval);
 }
+</pre>
 Save the moveElement function to a file called moveElement.js. Place this file in a folder called scripts, along with that old workhorse, addLoadEvent.js.
 Using the moveElement function
 Let’s take this function for a test drive.
 Start by re-creating the previous example. Create a document called message.html, which contains a paragraph identified as "message":
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -411,7 +493,10 @@ Start by re-creating the previous example. Create a document called message.html
 <p id="message">Whee!</p>
 </body>
 </html>
+</pre>
+
 Before we can animate the message, we need to position it. Write another JavaScript file called positionMessage.js. At the end of the positionMessage function, call the moveElement function:
+<pre>
 function positionMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
@@ -422,8 +507,11 @@ function positionMessage() {
   moveElement("message",200,100,10);
 }
 addLoadEvent(positionMessage);
+</pre>
+
 We are passing the string "message" as the value of the elementID argument. The final_x argument is 200. The final_y argument is 100. The value of interval is 10.
 Now you have three files in your scripts folder: addLoadEvent.js, positionMessage.js, and moveElement.js. Reference those files from message.html using <script> tags:
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -437,11 +525,14 @@ Now you have three files in your scripts folder: addLoadEvent.js, positionMessag
 <script src="scripts/moveElement.js"></script>
 </body>
 </html>
+</pre>
+
 Load message.html in a web browser to see the animation in action. The element moves horizontally across the screen.
  
 So far, so good. The moveElement function is working exactly like the moveMessage function. You abstracted the function so that you could send it any arguments you like. By altering the values of final_x and final_y, you can change the direction of the animation. Altering the value of interval changes the speed of the animation:
 function moveElement(elementID,final_x,final_y,interval)
 Update the last line of the positionMessage function in positionMessage.js so that these three values are changed
+<pre>
 function positionMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
@@ -452,11 +543,14 @@ function positionMessage() {
   moveElement("message",125,25,20);
 }
 addLoadEvent(positionMessage);
+</pre>
 Refresh message.html in a web browser to see the change. The element now moves diagonally and more slowly.
  
 The other argument that you can change in moveElement is the value of elementID:
 function moveElement(elementID,final_x,final_y,interval)
 Add a new element to message.html. Give it an id attribute of "message2":
+
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -471,7 +565,9 @@ Add a new element to message.html. Give it an id attribute of "message2":
 <script src="scripts/moveElement.js"></script>
 </body>
 </html>
+</pre>
 Now update positionMessage.js. Set the initial position of "message2" and call the moveElement function again, this time passing it "message2" as the first argument:
+<pre>
 function positionMessage() {
   if (!document.getElementById) return false;
   if (!document.getElementById("message")) return false;
@@ -488,12 +584,14 @@ function positionMessage() {
   moveElement("message2",125,125,20);
 }
 addLoadEvent(positionMessage);
+</pre>
 Reload message.html to see the new animation. Both elements move in different directions at the same time.
  
 The moveElement function is doing all the work in both cases. By simply changing the arguments that you send to the function, you can reuse it as often as you like. This is the great advantage of using arguments instead of hard-coding values.
 The situation
 We have a web page that contains a list of links. When the user hovers over one of these links, we want to provide some kind of sneak preview of where the link will lead—we would like to show an image.
 The document is called list.html. Here’s the markup:
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -510,6 +608,7 @@ The document is called list.html. Here’s the markup:
   </ol>
 </body>
 </html>
+</pre>
 Each link leads to a page covering a particular aspect of web design. The text within each link succinctly describes the content of the linked page.
  
 As it stands, this document is perfectly fine. That said, showing a visual clue about the destination documents would be a nice touch.
@@ -524,6 +623,7 @@ Here’s what we’ll do:
 I’ve made a composite image of the three previews plus one default view.
  
 The image is called topics.gif. It is 400 pixels wide and 100 pixels tall. We’ll insert the topics.gif image into list.html, giving it an id of "preview":
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -542,6 +642,7 @@ The image is called topics.gif. It is 400 pixels wide and 100 pixels tall. We’
     id="preview" />
 </body>
 </html>
+</pre>
 The web page now contains the list of links and the composite image.
  
 Right now, the entire image is visible. We want only a 100-by-100 pixel portion to be visible at any one time. We can’t do that with JavaScript, but we can do it with CSS.
@@ -554,26 +655,33 @@ There are four possible values for the overflow property:
 •	"auto": A value of “auto" is just like "scroll", except that the scrollbars will be displayed only if the content overflows its container element. If there is no overflow, no scrollbars appear.
 Of these four values, "hidden" sounds like the most promising for our purposes. We want to display just a 100-by-100 pixel portion of an image that is 400-by-100 pixels in size.
 First, let’s wrap the image in a container element. We’ll put it in a div element with an id of "slideshow":
+<pre>
 <div id="slideshow">
   <img src="images/topics.gif" alt="building blocks of web design" 
     id="preview" />
 </div>
+</pre>
 Now, we’ll create a style sheet called layout.css. Put this file in a folder called styles.
 In layout.css, we can set the size of the "slideshow" div:
+<pre>
 #slideshow {
   width: 100px;
   height: 100px;
   position: relative;
 }
+</pre>
 Setting the position to relative is important because we want to use an absolute position for the child image. By using relative, the 0,0 position for children elements will be the upper-left corner of the slideshow div.
 By applying an overflow value of "hidden", we can ensure that the content within the div will be clipped:
+<pre>
 #slideshow {
 width: 100px;
 height: 100px;
 position: relative;
 overflow: hidden;
 }
+</pre>
 We’re attaching the layout.css style sheet to list.html using a <link> in the head of the document:
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -595,6 +703,7 @@ We’re attaching the layout.css style sheet to list.html using a <link> in the 
   </div>
 </body>
 </html>
+</pre>
 Load list.html in a web browser to see the difference. The image has been clipped. Now only a portion of topics.gif—only the first 100 pixels—is visible.
  
 The next part of the plan revolves around the actions of the user. We want to display a different portion of topics.gif in the "slideshow" div depending on which link the user hovers the mouse over.
@@ -603,6 +712,7 @@ JavaScript
 We’ll use the moveElement function to move the topics.gif image around. We’ll move the image to the left or to the right, depending on which link the user is currently hovering over.
 We need to attach that behavior (calling the moveElement function) to the onmouseover event of each link in the link list.
 Here’s a function called prepareSlideshow, which does just that:
+<pre>
 function prepareSlideshow() {
   // Make sure the browser understands the DOM methods
   if (!document.getElementsByTagName) return false;
@@ -629,38 +739,54 @@ function prepareSlideshow() {
     moveElement("preview",-300,0,10);
   }
 }
+</pre>
 First, the prepareSlideshow function checks for browser compatibility with the DOM methods that will be used:
+<pre>
 if (!document.getElementsByTagName) return false;
 if (!document.getElementById) return false;
+</pre>
 Next, there’s a check to make sure that the "linklist" and "preview" elements exist. Remember that "preview" is the id value of the topics.gif image.
+<pre>
 if (!document.getElementById("linklist")) return false;
 if (!document.getElementById("preview")) return false;
+</pre>
 After that, a default position is given to the "preview" image. We’re setting the left property to "0px" and the top property to "0px":
+<pre>
 var preview = document.getElementById("preview");
 preview.style.position = "absolute";
 preview.style.left = "0px";
 preview.style.top = "0px";
+</pre>
 This doesn’t mean that the topics.gif image will appear in the top-left corner of the screen. Instead, it will appear in the top-left corner of its container element, the "slideshow" div. That’s because the CSS position value of the div is "relative". Any absolutely positioned elements contained by a relatively positioned element will be placed in relation to that container element. In other words, the "preview" image will appear zero pixels to the left and zero pixels from the top of the "slideshow" element.
 Finally, we’re attaching the onmouseover behaviors to the links in the list. The variable links contains a node set of all the a elements contained within the "linklist" element. The first link is links[0], the second link is links[1], and the third link is links[2].
+<pre>
 var list = document.getElementById("linklist");
 var links = list.getElementsByTagName("a");
+</pre>
 When the user hovers over the first link, the moveElement function is called. The elementID argument has a value of "preview". The final_x argument has a value of -100. The final_y argument has a value of 0. The interval argument is ten milliseconds.
+<pre>
 links[0].onmouseover = function() {
   moveElement("preview",-100,0,10);
 }
+</pre>
 The same behavior applies for the second link, except that the final_x argument is -200:
+<pre>
 links[1].onmouseover = function() {
   moveElement("preview",-200,0,10);
 }
+</pre>
 The third link will move the "preview" element -300 pixels to the left:
+<pre>
 links[2].onmouseover = function() {
   moveElement("preview",-300,0,10);
 }
+</pre>
 The prepareSlideshow function is called using the addLoadEvent function. The behaviors are attached when the page loads.
 addLoadEvent(prepareSlideshow);
 Save the prepareSlideshow function to a file called prepareSlideshow.js in a folder called scripts.
 Place the moveElement.js and addLoadEvent.js files in the same folder.
 We can reference all three scripts from list.html by adding <script> tags immediately before the closing </body> tag:
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -685,12 +811,14 @@ We can reference all three scripts from list.html by adding <script> tags immedi
   <script src="scripts/prepareSlideshow.js"></script>
 </body>
 </html>
+</pre>
 Load list.html in a web browser. Hover over one of the links in the list to see the slideshow in action.
  
 Depending on which link in the list you hover over, a different portion of the topics.gif image will slide into view.
 But something is not quite right. If you move quickly from link to the link, the animation becomes confused. There’s something wrong with the moveElement function.
 A question of scope
 The animation problem is being caused by a global variable. When we abstracted the moveMessage function and turned it into the moveElement function, we left the variable movement as it was:
+<pre>
 function moveElement(elementID,final_x,final_y,interval) {
   if (!document.getElementById) return false;
   if (!document.getElementById(elementID)) return false;
@@ -718,6 +846,7 @@ function moveElement(elementID,final_x,final_y,interval) {
   "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
   movement = setTimeout(repeat,interval);
 }
+</pre>
 This is causing a problem now that the moveElement function is being called whenever the user hovers over a link. Regardless of whether or not the previous call to the function has finished moving the image, the function is being asked to move the same element somewhere else. In other words, the moveElement function is attempting to move the same element to two different places at once, and the movement variable has become the rope in a tug of war.
 As the user quickly moves from link to link, there is a backlog of events building up in the setTimeout queue. We can flush out this backlog by using clearTimeout:
 clearTimeout(movement);
@@ -733,6 +862,7 @@ element.foo = "bar";
 It’s just like creating a variable. The difference is that the variable belongs just to that element.
 Let’s change movement from being a global variable to a property of the element being moved, elem.
 That way, we can test for its existence and, if it exists, use clearTimeout.
+<pre>
 function moveElement(elementID,final_x,final_y,interval) {
 if (!document.getElementById) return false;
 if (!document.getElementById(elementID)) return false;
@@ -762,44 +892,60 @@ elem.style.top = ypos + "px";
 var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
 elem.movement = setTimeout(repeat,interval);
 }
+</pre>
 Whichever element is currently being moved by the moveElement function is assigned a property called movement. If the element already has this property at the start of the function, it is reset using clearTimeout. This means that even if the same element is being told to move in different directions, there is only ever one setTimeout statement.
 Reload list.html. Moving quickly from link to link no longer creates a problem. There is no backlog of events being queued up. The animation changes direction as you move up and down the list of links. Still, the animation is a bit lackluster.
 Refining the animation
 The moveElement function moves an element one pixel at a time until it reaches the coordinates specified by the final_x and final_y arguments. The movement is smooth, but it’s also kind of boring. Let’s spice up the animation a bit.
 Take a look at this simple bit of code in moveElement.js:
+<pre>
 if (xpos < final_x) {
   xpos++;
 }
+</pre>
 The variable xpos is the element’s current left position. The variable final_x is the element’s final left position. This piece of code states, “If the variable xpos is less than the variable final_x, increase the value of xpos by one.” No matter how far away the element is from its final position, it will always move toward it one pixel at a time. To add some interest, we’ll change that.
 If the element is far away from its final position, we want it to move a large distance. If the element is near to its final position, we want it to move a short distance.
 First, we need to figure out how far the element is from its final destination. If xpos is less than final_x, we want to know by how much. We can find out by subtracting xpos, the current left position, from final_x, the desired left position:
+<pre>
 dist = final_x - xpos;
 That’s the distance that the element needs to travel. We’ll move the element one-tenth of this distance.
 dist = (final_x - xpos)/10;
 xpos = xpos + dist;
+</pre>
 This will move the element one-tenth of the distance it needs to go. I’ve chosen one-tenth as a nice round fraction. You can try other values if you like,
 If xpos is 500 pixels away from final_x, the variable dist will have a value of 50. The value of xpos is increased by 50. If xpos is 100 pixels less than final_x, xpos is increased by ten.
 A problem occurs when the distance between xpos and final_x is less than ten. When that value is divided by ten, the result will be less than one. You can’t move an element by less than one pixel.
 Using the ceil property of the Math object, you can round up the value of the variable dist. The ceil property has the following syntax:
+<pre>
 Math.ceil(number)
+</pre>
 This will round up any floating-point number to the nearest integer. There is a corresponding floor property that will round any floating-point number down to the nearest integer. The round property will round any floating-point number to whichever whole number is closest:
+<pre>
 Math.floor(number)
 Math.round(number)
+</pre>
 For the moveElement function, we’ll round upward. If we used floor or round, the element might never reach its final destination.
+<pre>
 dist = Match.ceil((final_x - xpos)/10);
 xpos = xpos + dist;
+</pre>
 This covers the situation when xpos is less than final_x:
+<pre>
 if (xpos < final_x) {
   dist = Math.ceil((final_x - xpos)/10);
   xpos = xpos + dist;
 }
+</pre>
 If xpos is greater than final_x, then the distance to travel is calculated by subtracting final_x from xpos. This value is divided by ten and rounded up to the nearest whole number to give the variable dist.
 This is then subtracted from xpos to bring the element closer to its final destination.
+<pre>
 if (xpos > final_x) {
   dist = Math.ceil((xpos - final_x)/10);
   xpos = xpos - dist;
 }
+</pre>
 The same logic applies for ypos and final_y:
+<pre>
 if (ypos < final_y) {
   dist = Math.ceil((final_y - ypos)/10);
   ypos = ypos + dist;
@@ -808,11 +954,15 @@ if (ypos > final_y) {
   dist = Math.ceil((ypos - final_y)/10);
   ypos = ypos - dist;
 }
+</pre>
 For good measure, don’t forget to declare the dist variable alongside xpos and ypos:
+<pre>
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
 var dist = 0;
+</pre>
 The updated moveElement function looks like this:
+<pre>
 function moveElement(elementID,final_x,final_y,interval) {
   if (!document.getElementById) return false;
   if (!document.getElementById(elementID)) return false;
@@ -848,12 +998,14 @@ function moveElement(elementID,final_x,final_y,interval) {
    "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
     elem.movement = setTimeout(repeat,interval);
 }
+</pre>
 Save these changes to moveElement.js. Reload list.html to see the difference.
  
 The animation now feels much smoother and snappier. When you first hover over a link, the image jumps quite a distance. As the image approaches its final destination, it “eases” into place.
 The markup, the CSS, and the JavaScript all come together to create this slideshow effect. Everything is working fine, but there’s always room for some small tweaks.
 Adding a safety check
 The moveElement function is working really well now. There’s just one thing that bothers me. There is an assumption being made near the start of the function:
+<pre>
 var xpos = parseInt(elem.style.left);
 var ypos = parseInt(elem.style.top);
 It’s assuming that the element elem has a left style property and a top style property. We should really check to make sure that this is the case.
@@ -861,15 +1013,19 @@ If the left or top properties haven’t been set, we have a couple of options. W
 if (!elem.style.left || !elem.style.top) {
   return false;
 }
+</pre>
 If JavaScript can’t read those properties, then the function stops without throwing up an error message.
 Another solution is to apply default left and top properties in the moveElement function. If either property hasn’t been set, we can give them a default value of "0px":
+<pre>
 if (!elem.style.left) {
   elem.style.left = "0px";
 }
 if (!elem.style.top) {
   elem.style.top = "0px";
 }
+</pre>
 The moveElement function now looks like this:
+<pre>
 function moveElement(elementID,final_x,final_y,interval) {
 if (!document.getElementById) return false;
 if (!document.getElementById(elementID)) return false;
@@ -910,30 +1066,45 @@ elem.style.top = ypos + "px";
 var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
 elem.movement = setTimeout(repeat,interval);
 }
+</pre>
 With that safety check in place, we no longer need to explicitly set the position of the "preview" element. Right now, we’re doing that in the prepareSlideshow function. Remove these lines:
+<pre>
 preview.style.left = "0px";
 preview.style.top = "0px";
+</pre>
 While we’re at it, let’s overhaul the prepareSlideshow function.
 Generating markup
 The list.html document contains some markup that exists just for the JavaScript slideshow:
+<pre>
 <div id="slideshow">
 <img src="images/topics.gif" alt="building blocks of web design" id="preview" />
 </div>
+</pre>
 If the user doesn’t have JavaScript enabled, this content is somewhat superfluous. The div and the img element are there purely for the slideshow effect. Instead of hard-coding these elements into the document, it makes sense to use JavaScript to generate them. Let’s do that in prepareSlideshow.js.
 First, create the div element:
+<pre>
 var slideshow = document.createElement("div");
 slideshow.setAttribute("id","slideshow");
+</pre>
 Next, create the img element:
+
+<pre>
 var preview = document.createElement("img");
 preview.setAttribute("src","images/topics.gif");
 preview.setAttribute("alt","building blocks of web design");
 preview.setAttribute("id","preview");
+</pre>
 Place the img inside the div:
+<pre>
 slideshow.appendChild(preview);
+</pre>
 Finally, we want these newly created elements to appear directly after the list of links. For this, we’ll use the insertAfter function from Chapter 7:
+<pre>
 var list = document.getElementById("linklist");
 insertAfter(slideshow,list);
+</pre>
 The finished prepareSlideshow function looks like this:
+<pre>
 function prepareSlideshow() {
   // Make sure the browser understands the DOM methods
   if (!document.getElementsByTagName) return false;
@@ -963,7 +1134,9 @@ function prepareSlideshow() {
   }
 }
 addLoadEvent(prepareSlideshow);
+</pre>
 Now we need to make some changes to list.html. We can remove the markup with the "slideshow" div and the "preview" image. We also need to include one more set of <script> tags to reference the insertAfter.js file.
+<pre>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -985,7 +1158,9 @@ Now we need to make some changes to list.html. We can remove the markup with the
   <script src="scripts/prepareSlideshow.js"></script>
 </body>
 </html>
+</pre>
 Write the insertAfter function to a file called insertAfter.js and place it in the scripts folder:
+<pre>
 function insertAfter(newElement,targetElement) {
   var parent = targetElement.parentNode;
   if (parent.lastChild == targetElement) {
@@ -994,9 +1169,13 @@ function insertAfter(newElement,targetElement) {
     parent.insertBefore(newElement,targetElement.nextSibling);
   }
 }
+</pre>
 The other file we need to update is the style sheet, layout.css. Remove this line from prepareSlideshow.js:
+<pre>
 preview.style.position = "absolute";
+</pre>
 Now place that declaration in the style sheet, where it belongs:
+<pre>
 #slideshow {
   width: 100px;
   height: 100px;
@@ -1006,6 +1185,7 @@ Now place that declaration in the style sheet, where it belongs:
 #preview {
   position: absolute;
 }
+</pre>
 Now refresh list.html in a web browser. You will see no difference in functionality. Everything is behaving just as before. The difference is that now there is better separation of structural, presentational, and behavioral elements. If you view the same page with JavaScript disabled, the slideshow image simply doesn’t appear.
 Functionally, the JavaScript slideshow is working very well. With JavaScript enabled, the slideshow adds some nice visual feedback, responding to the user’s actions. With JavaScript disabled, the functionality degrades gracefully.
 If you wanted to visually associate the list of links more closely with the slideshow, you could do that by editing layout.css. You could float the two elements side by side. You could also place a border around the slideshow if you wanted it to stand out more.
