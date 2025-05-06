@@ -213,7 +213,7 @@ variable = setTimeout("function",interval)
 You’ll need to do this if you want to cancel the action that has been queued up. You can cancel a pending action using a function called clearTimeout. This function takes one argument, which is a variable that has been assigned to the result of a setTimeout function:
 <pre>
 clearTimeout(variable)
-<pre>
+</pre>
 Let’s update the positionMessage function so that it calls moveMessage after 5 seconds (5,000 milliseconds):
 <pre>
 function positionMessage() {
