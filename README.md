@@ -131,16 +131,15 @@ The course consists of 8 modules that focus on the following key areas:
 -   [First out-of-order
     operations](https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2091.html)
 
-  [First Dial-up
+-  [First Dial-up
 Network](https://www.righto.com/2019/04/iconic-consoles-of-ibm-system360.html)
 
-  [Proposal for Email](https://datatracker.ietf.org/doc/html/rfc561)
+-  [Proposal for Email](https://datatracker.ietf.org/doc/html/rfc561)
 
-  [First ever Website](https://info.cern.ch/)
+-  [First ever Website](https://info.cern.ch/)
 
-  [How Browsers Work](https://web.dev/articles/howbrowserswork)
+-  [How Browsers Work](https://web.dev/articles/howbrowserswork)
 
--   
 
 **Module 2: HTML**
 
@@ -331,58 +330,46 @@ window.onload = positionMessage;
 
 Better yet, use the **addLoadEvent** function:
 
+<pre>
 function addLoadEvent(func) {
-
-var oldonload = window.onload;
-
-if (typeof window.onload != &#39;function&#39;) {
-
-window.onload = func;
-
-} else {
-
-window.onload = function() {
-
-oldonload();
-
-func();
-
+  var oldonload = window.onload;
+  if (typeof window.onload != &#39;function&#39;) {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
 }
-
-}
-
-}
-
 addLoadEvent(positionMessage);
+</pre>
 
 Here, the element has been positioned absolutely.
 
-![](./myImages/media/image1.png){width="4.0in"
-height="2.8816929133858267in"}
+![](./myImages/media/image1.png){width="4.0in" height="2.8816929133858267in"}
 
 Updating an element's position is also quite easy. You just need to run
 a function that updates a style property like top or left:
 
+<pre>
 function moveMessage() {
-
-if (!document.getElementById) return false;
-
-if (!document.getElementById(&quot;message&quot;)) return false;
-
-var elem = document.getElementById(&quot;message&quot;);
-
-elem.style.left = &quot;200px&quot;;
-
+  if (!document.getElementById) return false;
+  if (!document.getElementById(&quot;message&quot;)) return false;
+  var elem = document.getElementById(&quot;message&quot;);
+  elem.style.left = &quot;200px&quot;;
 }
+</pre>
 
 But how do you activate that function? If you execute **moveMessage**
 when the page loads, the element's position will be updated
 instantaneously. The original positioning, as specified by
 **positionMessage**, will be overridden instantly:
 
+<pre>
 addLoadEvent(positionMessage);
-
 addLoadEvent(moveMessage);
+</pre>
 
 Now the element's position has been changed.
 
@@ -405,12 +392,16 @@ The first argument is a string containing the function you want to
 execute. The second argument is the number of milliseconds that will
 elapse before the first argument is executed.
 
+<pre>
 setTimeout(&quot;function&quot;,interval)
+</pre>
 
 It's a good idea to always assign the result of this function to a
 variable:
 
+<pre>
 variable = setTimeout(&quot;function&quot;,interval)
+</pre>
 
 You'll need to do this if you want to cancel the action that has been
 queued up. You can cancel a pending action using a function called
@@ -422,27 +413,23 @@ clearTimeout(variable)
 Let's update the **positionMessage** function so that it calls
 moveMessage after 5 seconds (5,000 milliseconds):
 
+<pre>
 function positionMessage() {
-
-if (!document.getElementById) return false;
-
-if (!document.getElementById(&quot;message&quot;)) return false;
-
-var elem = document.getElementById(&quot;message&quot;);
-
-elem.style.position = &quot;absolute&quot;;
-
-elem.style.left = &quot;50px&quot;;
-
-elem.style.top = &quot;100px&quot;;
-
-movement = setTimeout(&quot;moveMessage()&quot;,5000);
-
+  if (!document.getElementById) return false;
+  if (!document.getElementById(&quot;message&quot;)) return false;
+  var elem = document.getElementById(&quot;message&quot;);
+  elem.style.position = &quot;absolute&quot;;
+  elem.style.left = &quot;50px&quot;;
+  elem.style.top = &quot;100px&quot;;
+  movement = setTimeout(&quot;moveMessage()&quot;,5000);
 }
+</pre>
 
 The **positionMessage** function is called when the page loads:
 
+<pre>
 addLoadEvent(positionMessage);
+</pre>
 
 At first, the message appears at its specified coordinates. After five
 seconds, the message jumps 150 pixels to the right.
@@ -450,7 +437,9 @@ seconds, the message jumps 150 pixels to the right.
 If you want to cancel that action any time before the five seconds
 elapse, you could do so with this statement:
 
+<pre>
 clearTimeout(movement);
+</pre>
 
 The movement variable refers to the **setTimeout** function defined in
 **positionMessage**. It's a global variable; it wasn't declared with the
@@ -496,11 +485,15 @@ The JavaScript function **parseInt** can extract numeric information
 from a string. If you pass it a string that begins with a number, it
 will return the number:
 
+<pre>
 parseInt(string)
+</pre>
 
 Here's an example:
 
+<pre>
 parseInt(&quot;39 steps&quot;);
+</pre>
 
 That will return the number 39.
 
@@ -508,14 +501,17 @@ The **parseInt** function will return whole numbers (integers). If you
 need to extract numbers with decimal places (floating-point numbers),
 there is a corresponding **parseFloat** function:
 
+<pre>
 parseFloat(string)
+</pre>
 
 We're dealing with integers in the **moveMessage** function, so we'll
 use **parseInt**:
 
+<pre>
 var xpos = parseInt(elem.style.left);
-
 var ypos = parseInt(elem.style.top);
+</pre>
 
 The **parseInt** function converts the string &quot;50px&quot; to the number 50.
 The string &quot;100px&quot; becomes the number 100. Now the **xpos** and
@@ -534,11 +530,11 @@ the final top position. If they are, we'll exit the function. We can do
 this test by using the comparison operator, which consists of two equal
 signs (remember that a single equal sign is used for assignment)
 
+<pre>
 if (xpos == 200 && ypos == 100) {
-
-return true;
-
+  return true;
 }
+</pre>
 
 Everything after this line will be executed only if the message element
 has not reached its final position.
@@ -548,34 +544,31 @@ relationship to the final position. We want to bring them both closer to
 the final coordinates. If the value of **xpos** is less than the final
 left position, increase it by one:
 
+<pre>
 if (xpos &lt; 200) {
-
-xpos++;
-
+  xpos++;
 }
+</pre>
 
 If it's greater than the final left position, decrease it:
 
+<pre>
 if (xpos &gt; 200) {
-
-xpos&#45;-;
-
+  xpos&#45;-;
 }
+</pre>
 
 The same applies for the relationship between the **ypos** variable and
 the final top position:
 
+<pre>
 if (ypos &lt; 100) {
-
-ypos++;
-
+  ypos++;
 }
-
 if (ypos &gt; 100) {
-
-ypos&#45;-;
-
+  ypos&#45;-;
 }
+</pre>
 
 You can see why we need **xpos** and **ypos** to be numbers rather than
 strings. We're using the less-than and greater-than operators to compare
@@ -585,67 +578,48 @@ Now we want to apply the **xpos** and **ypos** variables to the style
 property of the element. We do this by adding the string &quot;px&quot; to their
 values and applying them to the left and top properties:
 
+<pre>
 elem.style.left = xpos + &quot;px&quot;;
-
 elem.style.top = ypos + &quot;px&quot;;
+</pre>
 
 Finally, we want to repeat the whole function afresh after a slight
 pause. We'll make the pause one hundredth of a second, which is ten
 milliseconds:
 
+<pre>
 movement = setTimeout(&quot;moveMessage()&quot;,10);
+</pre>
 
 The finished moveMessage function looks like this:
 
+<pre>
 function moveMessage() {
-
-if (!document.getElementById) return false;
-
-if (!document.getElementById(&quot;message&quot;)) return false;
-
-var elem = document.getElementById(&quot;message&quot;);
-
-var xpos = parseInt(elem.style.left);
-
-var ypos = parseInt(elem.style.top);
-
-if (xpos == 200 && ypos == 100) {
-
-return true;
-
+  if (!document.getElementById) return false;
+  if (!document.getElementById(&quot;message&quot;)) return false;
+  var elem = document.getElementById(&quot;message&quot;);
+  var xpos = parseInt(elem.style.left);
+  var ypos = parseInt(elem.style.top);
+  if (xpos == 200 && ypos == 100) {
+    return true;
+  }
+  if (xpos &lt; 200) {
+    xpos++;
+  }
+  if (xpos &gt; 200) {
+    xpos&#45;-;
+  }
+  if (ypos &lt; 100) {
+    ypos++;
+  }
+  if (ypos &gt; 100) {
+    ypos&#45;-;
+  }
+  elem.style.left = xpos + &quot;px&quot;;
+  elem.style.top = ypos + &quot;px&quot;;
+  movement = setTimeout(&quot;moveMessage()&quot;,10);
 }
-
-if (xpos &lt; 200) {
-
-xpos++;
-
-}
-
-if (xpos &gt; 200) {
-
-xpos&#45;-;
-
-}
-
-if (ypos &lt; 100) {
-
-ypos++;
-
-}
-
-if (ypos &gt; 100) {
-
-ypos&#45;-;
-
-}
-
-elem.style.left = xpos + &quot;px&quot;;
-
-elem.style.top = ypos + &quot;px&quot;;
-
-movement = setTimeout(&quot;moveMessage()&quot;,10);
-
-}
+</pre>
 
 The message moves across the screen, one pixel at a time. Once the top
 property is &quot;100px&quot; and the left property is &quot;200px&quot;, the function
@@ -660,57 +634,34 @@ task. It moves a specific element to a specific place, pausing for a
 specific amount of time between movements. All of that information is
 hard-coded into the function:
 
+<pre>
 function moveMessage() {
-
-if (!document.getElementById) return false;
-
-if (!document.getElementById(&quot;message&quot;))
-
-return false;
-
-var elem = document.getElementById(&quot;message&quot;);
-
-var xpos = parseInt(elem.style.left);
-
-var ypos = parseInt(elem.style.top);
-
-if (xpos == 200 && ypos == 100) {
-
-return true;
-
+  if (!document.getElementById) return false;
+  if (!document.getElementById(&quot;message&quot;))
+  return false;
+  var elem = document.getElementById(&quot;message&quot;);
+  var xpos = parseInt(elem.style.left);
+  var ypos = parseInt(elem.style.top);
+  if (xpos == 200 && ypos == 100) {
+    return true;
+  }
+  if (xpos &lt; 200) {
+    xpos++;
+  }
+  if (xpos &gt; 200) {
+    xpos&#45;-;
+  }
+  if (ypos &lt; 100) {
+    ypos++;
+  }
+  if (ypos &gt; 100) {
+    ypos&#45;-;
+  }
+  elem.style.left = xpos + &quot;px&quot;;
+  elem.style.top = ypos + &quot;px&quot;;
+  movement = setTimeout(&quot;moveMessage()&quot;,10);
 }
-
-if (xpos &lt; 200) {
-
-xpos++;
-
-}
-
-if (xpos &gt; 200) {
-
-xpos&#45;-;
-
-}
-
-if (ypos &lt; 100) {
-
-ypos++;
-
-}
-
-if (ypos &gt; 100) {
-
-ypos&#45;-;
-
-}
-
-elem.style.left = xpos + &quot;px&quot;;
-
-elem.style.top = ypos + &quot;px&quot;;
-
-movement = setTimeout(&quot;moveMessage()&quot;,10);
-
-}
+</pre>
 
 If all of those things were variables, the function would be a lot more
 flexible. By abstracting the **moveMessage** function, you can create
@@ -748,20 +699,20 @@ function moveElement(elementID,final_x,final_y,interval) {
 Substitute these for the values that were previously hard-coded into
 **moveMessage**. The **moveMessage** function began with these lines:
 
+<pre>
 if (!document.getElementById) return false;
-
 if (!document.getElementById(&quot;message&quot;)) return false;
-
 var elem = document.getElementById(&quot;message&quot;);
+</pre>
 
 Replace all the instances of **getElementById(&quot;message&quot;)** with
 **getElementById(elementID):**
 
+<pre>
 if (!document.getElementById) return false;
-
 if (!document.getElementById(elementID)) return false;
-
 var elem = document.getElementById(elementID);
+</pre>
 
 The variable **elem** now refers to whichever element you want to move.
 
@@ -769,72 +720,70 @@ The next step of the function remains the same. The left and top
 properties of the element are converted to numbers and assigned to the
 variables **xpos** and **ypos**, respectively:
 
+<pre>
 var xpos = parseInt(elem.style.left);
-
 var ypos = parseInt(elem.style.top);
+</pre>
 
 Next, check to see if the element has reached its final position. In
 **moveMessage**, these coordinates were the values 200 (for the left
 position) and 100 (for the top position):
 
+<pre>
 if (xpos == 200 && ypos == 100) {
-
-return true;
-
+  return true;
 }
+</pre>
 
 In **moveElement**, these coordinates are provided by the arguments
 **final_x** and **final_y**:
 
+<pre>
 if (xpos == final_x && ypos == final_y) {
-
-return true;
-
+  return true;
 }
+</pre>
 
 Update the values of the **xpos** and **ypos** variables. If **xpos** is
 less than the final left position, increase its value by one.
 
 The final left position used to be hard-coded as 200:
 
+<pre>
 if (xpos &lt; 200) {
-
-xpos++;
-
+  xpos++;
 }
+</pre>
 
 Now the final left position is contained in the **final_x** argument:
 
+<pre>
 if (xpos &lt; final_x) {
-
-xpos++;
-
+  xpos++;
 }
+</pre>
 
 Likewise, if the value of **xpos** is greater than the final left
 position, decrease the value of **xpos** by one:
 
+<pre>
 if (xpos &gt; final_x) {
-
-xpos&#45;-;
-
+  xpos&#45;-;
 }
+</pre>
 
 Do the same for **ypos**. If its value is less than **final_y**,
 increase it by one. If it is greater than **final_y**, decrease it by
 one:
 
+<pre>
 if (ypos &lt; final_y) {
-
-ypos++;
-
+  ypos++;
 }
-
 if (ypos &gt; final_y) {
-
-ypos&#45;-;
-
+  ypos&#45;-;
 }
+</pre>
 
 The next step remains the same. Update the left and top style properties
 of the element **elem**.
@@ -842,15 +791,18 @@ of the element **elem**.
 Assign the values of **xpos** and **ypos** with the string &quot;px&quot;
 attached:
 
+<pre>
 elem.style.left = xpos + &quot;px&quot;;
-
 elem.style.top = ypos + &quot;px&quot;;
+</pre>
 
 Finally, we want to call the function again after a suitable interval.
 In **moveMessage**, this was quite straightforward. The **moveMessage**
 function is called after ten milliseconds:
 
+<pre>
 movement = setTimeout(&quot;moveMessage()&quot;,10);
+</pre>
 
 In **moveElement**, it gets a little trickier. As well as calling the
 function again, we need to pass it the same arguments: **elementID**,
@@ -863,8 +815,10 @@ That's a lot of concatenating! Rather than inserting that long string
 directly into the **setTimeout** function, assign the string to a
 variable called **repeat**:
 
+<pre>
 var repeat =
 &quot;moveElement(&#39;&quot;+elementID+&quot;&#39;,&quot;+final_x+&quot;,&quot;+final_y+&quot;,&quot;+interval+&quot;)&quot;;
+</pre>
 
 Now we can simply insert **repeat** as the first argument of the
 **setTimeout** function. The second argument is the length of the pause
@@ -872,66 +826,47 @@ before the first argument is called. This used to be hard-coded as ten
 milliseconds. Now it's whatever value is contained by the variable
 interval:
 
+<pre>
 movement = setTimeout(repeat,interval);
+</pre>
 
 Close the function with a curly brace:
 
+<pre>
 **}**
+</pre>
 
 The finished moveElement function looks like this:
 
+<pre>
 function moveElement(elementID,final_x,final_y,interval) {
-
 if (!document.getElementById) return false;
-
 if (!document.getElementById(elementID)) return false;
-
 var elem = document.getElementById(elementID);
-
 var xpos = parseInt(elem.style.left);
-
 var ypos = parseInt(elem.style.top);
-
 if (xpos == final_x && ypos == final_y) {
-
-return true;
-
+  return true;
 }
-
 if (xpos &lt; final_x) {
-
-xpos++;
-
+  xpos++;
 }
-
 if (xpos &gt; final_x) {
-
-xpos&#45;-;
-
+  xpos&#45;-;
 }
-
 if (ypos &lt; final_y) {
-
-ypos++;
-
+  ypos++;
 }
-
 if (ypos &gt; final_y) {
-
-ypos&#45;-;
-
+  ypos&#45;-;
 }
-
 elem.style.left = xpos + &quot;px&quot;;
-
 elem.style.top = ypos + &quot;px&quot;;
-
 var repeat =
 &quot;moveElement(&#39;&quot;+elementID+&quot;&#39;,&quot;+final_x+&quot;,&quot;+final_y+&quot;,&quot;+interval+&quot;)&quot;;
-
 movement = setTimeout(repeat,interval);
-
 }
+</pre>
 
 Save the **moveElement** function to a file called **moveElement.js**.
 Place this file in a folder called **scripts**, along with that old
@@ -944,49 +879,35 @@ Let's take this function for a test drive.
 Start by re-creating the previous example. Create a document called
 **message.html**, which contains a paragraph identified as &quot;message&quot;:
 
+<pre>
 &lt;!DOCTYPE html&gt;
-
 &lt;html lang=&quot;en&quot;&gt;
-
 &lt;head&gt;
-
 &lt;meta charset=&quot;utf-8&quot; /&gt;
-
 &lt;title&gt;Message&lt;/title&gt;
-
 &lt;/head&gt;
-
 &lt;body&gt;
-
 &lt;p id=&quot;message&quot;&gt;Whee!&lt;/p&gt;
-
 &lt;/body&gt;
-
 &lt;/html&gt;
+</pre>
 
 Before we can animate the message, we need to position it. Write another
 JavaScript file called **positionMessage.js**. At the end of the
 **positionMessage** function, call the **moveElement** function:
 
+<pre>
 function positionMessage() {
-
 if (!document.getElementById) return false;
-
 if (!document.getElementById(&quot;message&quot;)) return false;
-
 var elem = document.getElementById(&quot;message&quot;);
-
 elem.style.position = &quot;absolute&quot;;
-
 elem.style.left = &quot;50px&quot;;
-
 elem.style.top = &quot;100px&quot;;
-
 moveElement(&quot;message&quot;,200,100,10);
-
 }
-
 addLoadEvent(positionMessage);
+</pre>
 
 We are passing the string &quot;message&quot; as the value of the **elementID**
 argument. The **final_x** argument is 200. The **final_y** argument is
@@ -996,31 +917,21 @@ Now you have three files in your scripts folder: **addLoadEvent.js**,
 **positionMessage.js**, and **moveElement.js**. Reference those files
 from **message.html** using **&lt;script&gt;** tags:
 
+<pre>
 &lt;!DOCTYPE html&gt;
-
 &lt;html lang=&quot;en&quot;&gt;
-
 &lt;head&gt;
-
 &lt;meta charset=&quot;utf-8&quot; /&gt;
-
 &lt;title&gt;Message&lt;/title&gt;
-
 &lt;/head&gt;
-
 &lt;body&gt;
-
 &lt;p id=&quot;message&quot;&gt;Whee!&lt;/p&gt;
-
 &lt;script src=&quot;scripts/addLoadEvent.js&quot;&gt;&lt;/script&gt;
-
 &lt;script src=&quot;scripts/positionMessage.js&quot;&gt;&lt;/script&gt;
-
 &lt;script src=&quot;scripts/moveElement.js&quot;&gt;&lt;/script&gt;
-
 &lt;/body&gt;
-
 &lt;/html&gt;
+</pre>
 
 Load **message.html** in a web browser to see the animation in action.
 The element moves horizontally across the screen.
@@ -1040,25 +951,18 @@ function moveElement(elementID,final_x,final_y,interval)
 Update the last line of the **positionMessage** function in
 **positionMessage.js** so that these three values are changed
 
+<pre>
 function positionMessage() {
-
 if (!document.getElementById) return false;
-
 if (!document.getElementById(&quot;message&quot;)) return false;
-
 var elem = document.getElementById(&quot;message&quot;);
-
 elem.style.position = &quot;absolute&quot;;
-
 elem.style.left = &quot;50px&quot;;
-
 elem.style.top = &quot;100px&quot;;
-
 moveElement(&quot;message&quot;,125,25,20);
-
 }
-
 addLoadEvent(positionMessage);
+</pre>
 
 Refresh **message.html** in a web browser to see the change. The element
 now moves diagonally and more slowly.
@@ -1069,7 +973,9 @@ height="2.8571423884514435in"}
 The other argument that you can change in **moveElement** is the value
 of **elementID**:
 
+<pre>
 function moveElement(elementID,final_x,final_y,interval)
+</pre>
 
 Add a new element to **message.html**. Give it an id attribute of
 &quot;message2&quot;:
